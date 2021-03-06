@@ -18,8 +18,8 @@ Route::view('/','inicio')->name("inicio");
 
 // Sesion
 // Registro
-Route::get('/registro','PrsCtrl@sesion')->name('registro');
-Route::post('/registro','PrsCtrl@guardar');
+Route::get('/registro','UsuariosCtrl@sesion')->name('registro');
+Route::post('/registro','UsuariosCtrl@guardar');
 // Ingreso
-Route::get('/ingreso','PrsCtrl@sesion')->name('ingreso');
-Route::post('/ingreso','PrsCtrl@ingresar');
+Route::get('/ingreso','UsuariosCtrl@sesion')->name('ingreso');
+Route::post('/ingreso','UsuariosCtrl@ingresar');

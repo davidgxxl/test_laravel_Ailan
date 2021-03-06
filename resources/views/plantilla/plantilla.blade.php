@@ -82,7 +82,7 @@
         </div>
 
         {{-- Contenido --}}
-        <div class="container h-100 w-100">
+        <div class="container h-100 w-100 mt-5">
             @yield('contenido')
         </div>
     </div>

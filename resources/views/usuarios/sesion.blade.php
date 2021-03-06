@@ -1,5 +1,5 @@
 {{-- Plantilla --}}
-@extends('plantilla')
+@extends('plantilla.plantilla')
 
 {{-- Metadatos --}}
 @php
@@ -8,19 +8,20 @@
 
 {{-- Estilos --}}
 @section('estilos')
+    <link rel="stylesheet" href="{{asset("css/formularios.css")}}">
     <style>
         .form-sesion {
-            max-width: 750px;
+            max-width: 500px;
             margin: 0px auto;
         }
     </style>
 @append
 
 {{-- Contenido --}}
-@section('contenido-dinamico-vista')
+@section('contenido')
 
     {{-- Formulario --}}
-    <form action="/{{Route::currentRouteName()}}" method="POST">
+    <form action="/{{Route::currentRouteName()}}" method="POST" class="form-sesion">
         @csrf
 
         {{-- Titulo --}}
@@ -30,7 +31,7 @@
 
             {{-- Registro --}}
             @case("registro")
-                @include('prs.campos-pr',$campos=["contraseñas"])
+                @include('usuarios.campos-perfil',$campos=["contraseñas"])
             @break
 
             {{-- Iniciar sesion --}}
@@ -38,7 +39,7 @@
                 <div class="fila-form">
                     <div>
                         <label>Correo</label>
-                        <input type="text" class="form-control" name="email" autofocus required>
+                        <input type="email" class="form-control" name="email" autofocus required>
                     </div>
                 </div>
                 <div class="fila-form">
