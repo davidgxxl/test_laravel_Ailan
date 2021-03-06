@@ -24,6 +24,10 @@ Route::post('/registro','UsuariosCtrl@guardar');
 Route::get('/ingreso','UsuariosCtrl@sesion')->name('ingreso');
 Route::post('/ingreso','UsuariosCtrl@ingresar');
 
+// Artistas
+Route::get("/artistas/{filtros?}","ArtistasCtrl@artistas")->name("artistas");
+// Route::get("/artistas/{filtos?}","ArtistasCtrl@artistas")->name("filtros-artistas");
+
 // Rutas protegidas
 Route::group(['middleware' => 'auth'],function(){
 

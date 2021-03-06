@@ -64,7 +64,7 @@
         
                 {{-- Centro --}}
                 <div>
-
+                    <a href="{{route("artistas")}}">Artistas</a>
                 </div>
 
                 {{-- Derecha --}}
