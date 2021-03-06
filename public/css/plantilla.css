@@ -1,0 +1,25 @@
+/* Variables */
+:root {
+    --c-plantilla: rgba(192, 57, 43);
+    --c-letra-plantilla: white;
+}
+
+/* Menú y Pie de página */
+.menu, .pie-pagina {
+    background: var(--c-plantilla);
+    color: var(--c-letra-plantilla);
+    box-shadow: 0px 0px 5px black;
+}
+
+/* Menú */
+.menu {
+    position: sticky;
+    top: 0px;
+    padding: 7.5px;
+}
+.logotipo-menu {
+    width: 75px;
+    margin-right: 12.5px;
+}
+.menu > * { width: 100%; }
+.menu a { color: white; }

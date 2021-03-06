@@ -1,0 +1,18 @@
+/* Formularios */
+.fila-form {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 7.5px;
+}
+.fila-form > *:not(.cont-btn) { width: 100%; }
+.fila-form > *:not(:last-child) { margin-right: 15px; }
+.btns-form {
+    text-align: right;
+    margin-top: 50px;
+}
+.btns-form > *:not(:last-child){ margin-right: 15px; }
+textarea {
+    min-height: 150px;
+    max-height: 300px;
+}
