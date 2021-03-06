@@ -5,7 +5,7 @@
 @php
     switch ($vista) {
         case 1: $tituloMD = "Artistas"; break;
-        case 2: $tituloMD =  $rs["artist"]; break;
+        case 2: $tituloMD = $rs["result"]["artist"]; break;
     }
 @endphp
 
@@ -84,7 +84,9 @@
 
         {{-- Artista --}}
         @case(2)
-            @php($rs = $rs["result"])
+            @php
+                $rs = $rs["result"]
+            @endphp
             <div class="d-flex">
                 <img src="{{$rs["cover"]}}" alt="{{$rs["artist"]}}">
                 <table class="ml-3">
