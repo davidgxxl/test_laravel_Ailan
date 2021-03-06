@@ -70,7 +70,7 @@
                 {{-- Derecha --}}
                 @auth
                     <div>
-
+                        <a href="{{route("salir")}}">Cerrar sesión</a>
                     </div>
                 @else
                     <div>
