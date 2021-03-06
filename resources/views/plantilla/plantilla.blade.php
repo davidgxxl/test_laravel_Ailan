@@ -48,7 +48,7 @@
 <body>
 
     {{-- Cuerpo --}}
-    <div class="d-flex flex-column min-vh-100" style="height:1px">
+    <div class="d-flex flex-column min-vh-100">
 
         {{-- Menú --}}
         <div class="menu">
@@ -82,7 +82,7 @@
         </div>
 
         {{-- Contenido --}}
-        <div class="container h-100 w-100 mt-5">
+        <div class="container h-100 w-100 my-5">
             @yield('contenido')
         </div>
     </div>

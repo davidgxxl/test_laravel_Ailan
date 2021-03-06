@@ -21,7 +21,7 @@
 @section('contenido')
 
     {{-- Formulario --}}
-    <form action="/{{Route::currentRouteName()}}" method="POST" class="form-sesion">
+    <form action="/{{Route::currentRouteName()}}" method="POST" class="form-sesion" enctype="multipart/form-data">
         @csrf
 
         {{-- Titulo --}}

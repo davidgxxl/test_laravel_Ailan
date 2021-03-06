@@ -13,17 +13,18 @@ class CrearTbUsuarios extends Migration
      */
     public function up()
     {
-        Schema::create('usuarios', function (Blueprint $table) {
-            $table->id();
-            $table->string('nombre_1');
-            $table->string('nombre_2');
-            $table->string('apellido_1');
-            $table->string('apellido_2');
-            $table->string('telf');
-            $table->string('fecha_nacimiento');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->timestamps();
+        Schema::create('usuarios', function (Blueprint $tb) {
+            $tb->id();
+            $tb->string('foto_perfil')->nullable();
+            $tb->string('nombre_1');
+            $tb->string('nombre_2')->nullable();
+            $tb->string('apellido_1');
+            $tb->string('apellido_2')->nullable();
+            $tb->string('email')->unique();
+            $tb->string('telf');
+            $tb->string('fecha_nacimiento');
+            $tb->string('password');
+            $tb->timestamps();
         });
     }
 

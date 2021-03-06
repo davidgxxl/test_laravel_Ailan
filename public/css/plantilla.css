@@ -16,6 +16,7 @@
     position: sticky;
     top: 0px;
     padding: 7.5px;
+    z-index: 1;
 }
 .logotipo-menu {
     width: 75px;

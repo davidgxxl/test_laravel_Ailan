@@ -23,3 +23,22 @@ Route::post('/registro','UsuariosCtrl@guardar');
 // Ingreso
 Route::get('/ingreso','UsuariosCtrl@sesion')->name('ingreso');
 Route::post('/ingreso','UsuariosCtrl@ingresar');
+
+// Rutas protegidas
+Route::group(['middleware' => 'auth'],function(){
+
+    // Perfil
+    Route::prefix($prefijo='perfil')->name($prefijo)->group(function(){
+        Route::get('/',function (){
+            $usuario = Auth::user();
+            return view("usuarios.usuario",compact("usuario"));
+        })->name('');
+        Route::post("/guardar-perfil","UsuariosCtrl@guardar")->name("-guardar");
+    });
+
+    // Cerrar sesion
+    Route::get('/salir',function(){
+        Auth::logout();
+        return redirect()->route("inicio");
+    })->name("salir");
+});
